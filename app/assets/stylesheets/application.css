@@ -11,3 +11,28 @@
  *= require_self
  *= require_tree .
  */
+
+.qrcode {
+	padding: 10px;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.tall {
+	margin-bottom: 24px;
+}
+
+.line {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+#message {
+	padding-top: 10px;
+}

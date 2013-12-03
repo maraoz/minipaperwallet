@@ -48,8 +48,8 @@ test:
   encoding: unicode
   database: minipaperwallet_test
   pool: 5
-  username: minipaperwallet
-  password:
+  username: root
+  password: root
 
 production:
   adapter: postgresql
