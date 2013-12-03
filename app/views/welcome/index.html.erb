@@ -5906,7 +5906,7 @@
 	</div>
 </div>
 
-<div class="container" style="padding-top: 60px;">
+<div class="container" id="container" style="padding-top: 60px;">
 	<div id="buttons" class="tall">
 		<button class="btn btn-inverse" id="newaddress" onclick="ninja.wallets.singlewallet.generateNewAddressAndKey();">
 			Generate
@@ -5915,17 +5915,23 @@
 			Print
 		</button>
 	</div>
-	<div class="row" id="wallet">
-		<div class='span4'>
-			<div id="qrcode_public" class="qrcode" ></div>
-			<span id="btcaddress"></span>
-		</div>
-		<div id="message" class="span4 center"></div>
-		<div class='span4'>
-			<div id="qrcode_private" class="qrcode right"></div>
-			<span class="right" id="btcprivwif"></span>
+	<div id="app">
+		<div class="row" id="wallet">
+			<div class='span4'>
+				<div id="qrcode_public" class="qrcode" ></div>
+				<span id="btcaddress"></span>
+			</div>
+			<div id="message" class="span4 center"></div>
+			<div class='span4'>
+				<div id="qrcode_private" class="qrcode right"></div>
+				<span class="right" id="btcprivwif"></span>
+			</div>
 		</div>
 	</div>
+
+<footer id="footer">
+	Code adapted from <a href="https://www.bitaddress.org/">bitaddress.org</a>.
+</footer>
 
 </div>
 <!-- /container -->
@@ -5934,9 +5940,11 @@
 	var printWallet = function() {
 		document.getElementById("navbar").style.display = "none";
 		document.getElementById("buttons").style.display = "none";
+		document.getElementById("footer").style.display = "none";
 	    window.print()
 	    document.getElementById("navbar").style.display = "block";
 		document.getElementById("buttons").style.display = "block";
+		document.getElementById("footer").style.display = "block";
 	}
 	var ninja = {
 		wallets : {}

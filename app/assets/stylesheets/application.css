@@ -33,6 +33,10 @@
 	border-top: 1px solid black;
 }
 
+#app {
+	min-height: 420px;
+}
+
 #message {
 	padding-top: 10px;
 }
